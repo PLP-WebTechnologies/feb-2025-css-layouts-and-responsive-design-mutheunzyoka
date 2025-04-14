@@ -170,3 +170,19 @@ span{
     left: 0;
     font-size: 2rem;
 }
+@media (max-width: 600px) {
+    /* Styles for screens smaller than 600px */
+    .sidebar {
+      display: none;
+    }
+  }
+  
+  @media (orientation: landscape) {
+    /* Styles for landscape orientation */
+  }
+  @media print {
+    /* Styles for printed pages */
+    body {
+      font-size: 12pt;
+    }
+  }
