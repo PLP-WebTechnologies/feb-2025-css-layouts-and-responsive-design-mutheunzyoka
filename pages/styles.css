@@ -1,0 +1,172 @@
+*{
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --bg-color:#669966;
+    --snd-bg-color: #fff;
+    --text-color: #333;
+    --main-color: #006633;
+}
+html{
+    font-size: 50%;
+    overflow-x: auto;
+    scroll-padding-top:4rem;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 5%;
+    background: var(--main-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 13rem;
+    
+}
+.logo:hover{
+
+    transform: scale(1.05);
+}
+.navbar a{
+    font-size: 1.9rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    margin-left: 4rem;
+    transition: 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
+    
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rem 3rem;
+}
+.home-img img{
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    animation:floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+.home-content{
+     
+    margin-left: 5rem;
+}
+.home-content h3{
+    font-size: 3.7rem;
+    font-weight: 700;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+
+.about{
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+
+}
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    margin-top: 0.5rem;
+
+  }
+    
+    
+
+
+.heading{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    
+}
+.highlight{ 
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+    text-align: center;
+   
+    
+}
+/* Replace your current about section styles with this: */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 10%;
+    background: var(--snd-bg-color);
+    margin-top: 8rem; /* Give space below fixed header */
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+
+.skills-list {
+
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.skills-list li::before {
+    content: "•";
+    color: var(--main-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+}
